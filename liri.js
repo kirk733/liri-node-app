@@ -3,7 +3,7 @@ var keys = require('./keys.js');
 
 
 
-    var client = new Twitter(keys);
+    var client = new Twitter(keys.twitterKeys);
     var params = {screen_name: 'ClassKrik'};
     client.get('statuses/user_timeline', params, function(error, tweets, response) {
         if (!error) {
