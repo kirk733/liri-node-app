@@ -17,14 +17,13 @@ if (userchoice === 'my-tweets'){
 else if (userchoice === 'spotify-this-song'){
 	var spotify = new Spotify(keys.spotifyKeys);
 	spotify
-  		.search({ type: 'track', query: 'All the Small Things' })
+  		.search({ type: 'track', query: 'The Sign' })
   		.then(function(response) {
-    		console.log(response);
-    		console.log(data.tracks.items)
+    		console.log(response.tracks.items);
 
   		})
   		.catch(function(err) {
-    		console.log(error);
+    		console.log(err);
   	});
 
 }
